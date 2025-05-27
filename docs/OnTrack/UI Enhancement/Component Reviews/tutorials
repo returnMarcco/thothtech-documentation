@@ -15,7 +15,15 @@ First select a component to review from the list below:
     - `tutorials.component.scss`
 
 ## Component purpose
-- The purpose of the component is to enable students to `Enrol` or `Withdraw` from tutorials for any particular unit.
+- The purpose of the component is to enable students to `Enrol` or `Withdraw` from tutorials for any particular unit
+- This component does not contain any nested components
+- Available tutorials are filtered by `campus_id`
+- The files that interact with this component are:
+    - `doubtfire-angular.module.ts`: Links the component to the main Angular module, making it available in the web app
+    - `doubtfire-angularjs.module.ts: Downgrades the component, making it backwards-compatible with `AngularJS`
+    - `doubtfire.states.ts`: Configures the `UI Router` (routing library) for the component, making it navigatable from other components that declare the defined route
+    - `task-dropdown-component.html`: Triggers the route `onClick` of a button, subsequently rendering the `tutorials.component.tpl.html` template
+    - `group-selector.tpl.html`: Triggers the route `onClick` of an `anchor` tag, subsequently rendering the `tutorials.component.tpl.html` template
 ![after](https://github.com/user-attachments/assets/49255060-9ff9-4cf6-ab5d-acbacb7f3075)
 
 ## Component outcomes and interactions
@@ -23,7 +31,7 @@ First select a component to review from the list below:
     - Show a list of tutorials for the selected unit (filtered by campus)
     - Enroll in a tutorial by clicking the `Enrol` button
     - Withdraw from a tutorial by clicking the `Withdraw` button
-    - Sort the table view of tutorials by most `TH` fields.
+    - Sort the table view of tutorials by most `TH` field
 - This component interacts with:
     - The files listed above
     - The `doubtfire-states` file (UI-Router library for routing)
